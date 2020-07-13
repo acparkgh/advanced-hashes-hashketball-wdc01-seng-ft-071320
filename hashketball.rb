@@ -266,16 +266,14 @@ def long_name_steals_a_ton?
       if longest_name == nil || player[:player_name].length > longest_name_length
         longest_name_length = player[:player_name].length
         longest_name = player[:player_name]
-        
-        
-        
+        longest_name_steal = player[:steals]
       end
       if most_steal == nil || player[:steals] > most_steal
         most_steal = player[:steals]
       end
     end
   end
-  longest_name_steal == most_steal ? true : false
+  longest_name_steal >= most_steal ? true : false
 end
 
 
